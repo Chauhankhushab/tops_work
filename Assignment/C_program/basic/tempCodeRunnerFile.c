@@ -1,0 +1,5 @@
+ float PRINCIPAL_AMOUNT; 
+    float INTEREST_RATE;
+    int TIME;
+    int COMPOUNDING_FREQUENCY;
+    float COMPOUND_INTERSET;
