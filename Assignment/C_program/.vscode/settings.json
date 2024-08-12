@@ -1,6 +1,8 @@
 {
-    "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
-        "QUE13.C": "cpp"
-    }
+        "P5.C": "cpp",
+        "que13.C": "cpp",
+        "QUE23.C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
