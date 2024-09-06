@@ -12,7 +12,7 @@ An additional surcharge of 20% is added to the bill
 
 int main() {
     int units;
-    float charge, total_bill, surcharge;
+    float charge, total_bill, surcharge ,bill=0;
 
     printf("Enter the number of units consumed: ");
     scanf("%d", &units);
@@ -24,6 +24,11 @@ int main() {
     } else if (units <= 250) {
         charge = 50 * 0.50 + 100 * 0.75 + (units - 150) * 1.20;
     } else {
-        charge = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 +
+        charge = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 + (units -250) * 1.5;
+        surcharge = total_bill * 0.2 ;
+        bill += surcharge;
+         printf("Total electricity bill: Rs. %.2f\n", bill);
     }
+
+}
 

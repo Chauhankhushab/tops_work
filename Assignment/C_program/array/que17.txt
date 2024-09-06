@@ -1,0 +1,36 @@
+//17.WAP to show difference between Structure and Union.
+Defining a Structure – A user must deploy the struct statement to define a structure. This statement determines a new data type. It has equal to or more than one member. Here’s the format of a struct statement:
+
+Structure Syntax :-
+struct [structure name]
+
+{
+
+type member_1;
+
+type member_2;
+
+. . .
+
+type member_n;
+
+};
+
+Union :-
+
+Defining a Union – A user must deploy the union statement for defining a Union. It determines a new data type that has more than one member for the intended program. Here’s the format of a union statement:
+
+Syntax of Declaring a Union
+union [union name]
+
+{
+
+type member_1;
+
+type member_2;
+
+. . .
+
+type member_n;
+
+};
