@@ -1,0 +1,24 @@
+ Question 3: What is the difference between block-level elements and inline elements in
+HTML? Provide examples of each
+
+block-level elements:-----
+Starts on a new line (creates block structure).
+Used for sections of the page (e.g., paragraphs, headings, divs).
+<div>, <p>, <h1>, <ul>, <ol>, <table>
+
+examples:-      <div>
+                             <h1>Heading</h1>
+                             <p>This is a paragraph.</p>
+                </div>
+
+
+inline elements:------
+
+Do not start on a new line (remain inline with other content).
+Used for small elements within a block (e.g., links, bold/italic text, images).
+
+examples:-
+
+            <p>This is a <strong>   bold    </strong>   and <em>    italic  </em> text. </p>
+
+            

@@ -1,0 +1,32 @@
+Question 1: Explain the structure of an HTML table and the purpose of each of the following
+elements: <table>, <tr>, <th>, <td>, and <thead>.
+
+<table>:
+Purpose: The <table> element is the container that defines the entire table structure. It encapsulates all the rows (<tr>), headers (<th>), and data cells (<td>).
+Usage: It must contain the table content and is the outermost element for defining a table.
+
+<tr> (Table Row):
+
+Purpose: The <tr> element represents a row in the table. It contains one or more table data (<td>) or header cells (<th>), creating the structure for a single horizontal line of content in the table.
+Usage: Every row is wrapped in a <tr> element, and it groups the cells for that particular row.
+
+
+<th> (Table Header Cell):
+
+Purpose: The <th> element defines a header cell. It is used for table headers that provide context or titles for the columns or rows of the table. By default, text in <th> cells is bold and centered.
+Usage: Typically used in the first row or column to label the data in the table. It helps users understand what the data represents.
+
+
+<td> (Table Data Cell):
+
+Purpose: The <td> element defines a data cell in a table. It contains the actual data or content of the table, such as numbers, text, or other elements.
+Usage: Each <td> represents a single unit of data in the table, and it is placed within a row (<tr>).
+
+
+
+<thead> (Table Head):
+
+Purpose: The <thead> element is used to group the header content of a table. It typically contains one or more <tr> elements that define the column headers (<th>).
+Usage: It is placed at the beginning of the table and groups the header row(s) for easy styling or manipulation. The <thead> section is particularly useful for long tables, making it easier to apply styles or for accessibility purposes, such as when scrolling a large table.
+
+

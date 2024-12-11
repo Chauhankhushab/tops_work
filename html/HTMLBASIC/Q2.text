@@ -1,0 +1,25 @@
+ Question 2: Explain the basic structure of an HTML document. Identify the mandatory tags
+and their purposes.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document Title</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>This is a paragraph of text.</p>
+  </body>
+</html>
+
+
+1-----<!DOCTYPE html>: It tells the browser to interpret the document as HTML5, the latest version of HTML.
+
+2-----<html>: It wraps the entire HTML structure.
+
+3-----<head>:section contains metadata about the document.
+
+4-----<body>:  tag contains the visible content of the webpage, such as text, images, links, forms, and other elements that users can interact with or view in their browser.
+
+

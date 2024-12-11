@@ -1,0 +1,13 @@
+ Question 3: Why should tables be used sparingly for layout purposes? What is a better
+alternative?
+
+While HTML tables are a powerful tool for displaying tabular data, they should not be used for layout purposes. 
+
+Using tables for layout creates several issues related to accessibility, maintainability, responsiveness, and flexibility.
+
+Better Alternative: CSS for Layout
+A much better and more modern approach to layout design is using CSS (Cascading Style Sheets).
+
+1. Flexbox:
+2. CSS Grid:
+3. Media Queries:

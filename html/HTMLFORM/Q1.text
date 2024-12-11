@@ -1,0 +1,50 @@
+ Question 1: What are HTML forms used for? Describe the purpose of the input, textarea,
+select, and button elements
+
+HTML forms are used to collect user input on a webpage. 
+They allow users to submit data to a server for processing, which can include submitting login information, making purchases, signing up for newsletters, and much more. Forms are fundamental for enabling interactivity on websites. They consist of different input fields where users can enter data, and upon submission, the form data is sent to a server to be processed or stored.
+
+Purpose of the Input, Textarea, Select, and Button Elements
+HTML forms use various form elements to gather different types of data from users.
+
+1. <input> Element
+The <input> element is the most versatile form element in HTML.
+type: Specifies the type of input (e.g., text, password, email, radio, checkbox).
+name: Identifies the input element, which is sent with the form data when the form is submitted.
+value: Sets the default value for the input.
+placeholder: Provides a hint about what kind of data is expected in the input field.
+
+
+2. <textarea> Element
+The <textarea> element allows the user to enter multi-line text.
+
+Purpose: The <textarea> element is used to provide a larger area for users to type in, allowing them to enter multiple lines of text.
+
+Common Attributes:
+
+rows: Specifies the visible number of text lines.
+cols: Specifies the width of the textarea in terms of the number of characters.
+name: Identifies the element when the form is submitted.
+placeholder: Displays placeholder text within the textarea.
+
+3. <select> Element
+The <select> element creates a drop-down menu that allows users to choose one or more options from a predefined list.
+
+Purpose: The <select> element is used to provide a list of options for the user to choose from, such as selecting a country, a product, or a preference.
+
+Common Attributes:
+
+name: Identifies the select element when the form is submitted.
+<option>: Used within the <select> tag to define the choices the user can select from.
+multiple: Allows the user to select more than one option.
+
+4. <button> Element
+The <button> element is used to create clickable buttons that can trigger actions, such as submitting a form or resetting form fields
+
+Purpose: The <button> element is used to create interactive buttons, which can trigger actions like form submission, clearing input fields, or executing custom JavaScript functions.
+
+Common Attributes:
+
+type: Specifies the button type (e.g., submit, reset, button).
+name: Identifies the button when the form is submitted.
+onclick: Attaches a JavaScript function to be triggered when the button is clicked.

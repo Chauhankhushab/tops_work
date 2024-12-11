@@ -1,0 +1,41 @@
+Question 2: What is the difference between colspan and rowspan in tables? Provide examples
+
+1. colspan (Column Span)
+Purpose: The colspan attribute allows a table cell (<td> or <th>) to span across multiple columns in a table.
+It is used to make a cell wider by merging it with the cells in adjacent columns
+
+<table border="1">
+  <tr>
+    <th colspan="3">Header spanning 3 columns</th>
+  </tr>
+  <tr>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+    <td>Cell 3</td>
+  </tr>
+  <tr>
+    <td colspan="2">This cell spans 2 columns</td>
+    <td>Cell 3</td>
+  </tr>
+</table>
+
+
+2.rowspan (Row Span)
+Purpose: The rowspan attribute allows a table cell (<td> or <th>) to span across multiple rows.
+It is used to make a cell taller by merging it with cells in adjacent rows.
+
+
+
+<table border="1">
+  <tr>
+    <th rowspan="2">Header spanning 2 rows</th>
+    <th>Header 2</th>
+  </tr>
+  <tr>
+    <td>Cell 1</td>
+  </tr>
+  <tr>
+    <td>Cell 2</td>
+    <td>Cell 3</td>
+  </tr>
+</table>

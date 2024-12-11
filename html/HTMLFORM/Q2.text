@@ -1,0 +1,15 @@
+Question 2: Explain the difference between the GET and POST methods in form submission.
+When should each be used?
+
+=================================================================================================================================
+|Feature	        |GET	                                         |                         POST                              |
+|Data Location      |Data is appended in the URL (query string).     |	Data is sent in the body of the request.                 |
+|Security       	|Not secure (data visible in the URL).	         |More secure (data not visible in the URL).                 |
+|Data Size      	|Limited (due to URL length limitations).	     |No practical size limit.                                   |
+|Caching	        |Can be cached by browsers.	                     |Cannot be cached.                                          |
+|Use Case	        |For retrieving data (e.g., search).	         |For submitting data (e.g., forms with sensitive data).     |
+|Idempotent	        |Yes (refreshing/repeating doesn't change state).|	No (can modify server state, e.g., creating resources).  |
+=================================================================================================================================
+
+
+GET is used for safe, non-sensitive data retrieval, while POST is preferred for submitting sensitive or large data, or when the action modifies server-side data.

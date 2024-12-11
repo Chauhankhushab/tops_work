@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body>
+    <fieldset>
+        <legend>My Form</legend>
+        <form action="#">
+            <label for="fname">Full Name :</label>
+            <input type="text" name="fname" id="fname" placeholder="Full Name" minlength="2" maxlength="15" required>
+            <br><br>
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <br><br>
+            <label for="phone">Phone Number :</label>
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number" maxlength="10" required>
+            <br><br>
+            <label for="menu">Subject :</label>
+            <select>
+                <option value="">--select--</option>
+                <option value="">Maths</option>
+                <option value="">English</option>
+                <option value="">Gujarati</option>
+                <option value="">English</option>
+            </select>
+            <br><br>
+            <label for="message">Message :</label>
+            <textarea name="message" id="message" rows="2" cols="30" maxlength="50" required></textarea>
+            <br><br>
+            <button type="Submit" class="btn">Submit</button>
+        </form>
+
+    </fieldset>
+
+</body>
+
+</html>
