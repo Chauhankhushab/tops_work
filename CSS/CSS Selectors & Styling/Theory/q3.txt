@@ -1,0 +1,47 @@
+ Question 3: What is the difference between internal, external, and inline CSS? Discuss the
+advantages and disadvantages of each approach.
+
+CSS (Cascading Style Sheets) can be applied to HTML documents in three main ways: inline, internal, and external.
+
+These methods differ in how and where the CSS is written and applied to HTML elements.
+
+1. Inline CSS
+
+<p style="color: red; font-size: 18px;">This is a red-colored paragraph with a font size of 18px.</p>
+
+2. Internal CSS
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal CSS Example</title>
+    <style>
+        p {
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a blue-colored paragraph with a font size of 20px.</p>
+</body>
+</html>
+
+
+3. External CSS:=-
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External CSS Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p>This is a styled paragraph.</p>
+</body>
+</html>

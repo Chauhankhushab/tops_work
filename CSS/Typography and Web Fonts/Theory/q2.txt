@@ -1,0 +1,37 @@
+Question 2: What is the font-family property in CSS? How do you apply a custom Google 
+Font to a webpage?
+
+
+
+examples:-
+
+body {
+    font-family: "Arial", sans-serif;
+}
+
+
+
+1.
+Google Fonts provides a <link> tag to embed the font into your webpage. 
+
+<head>
+    <!-- Add this link to include the Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+
+2.<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Google Font Example</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a paragraph with a custom Google font.</p>
+</body>
+</html>

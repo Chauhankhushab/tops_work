@@ -1,0 +1,13 @@
+Question 1: What are media queries in CSS, and why are they important for responsive
+design?
+Media queries in CSS are used to apply different styles to a webpage depending on certain conditions, such as the viewport width, device type, screen resolution, or orientation of the device.
+They allow developers to create a responsive design that adapts to various screen sizes and device capabilities.
+A media query is typically used to apply styles based on the characteristics of the device or viewport.
+
+@media <media-type> and (<condition>) {
+    /* CSS rules */
+}
+
+
+CSS rules: The styles inside the @media block are applied when the media query condition is true.
+

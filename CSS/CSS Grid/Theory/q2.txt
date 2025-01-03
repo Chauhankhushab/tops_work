@@ -1,0 +1,23 @@
+Question 2: Describe the grid-template-columns, grid-template-rows, and grid-gap
+properties. Provide examples of how to use them.
+
+1. grid-template-columns
+The grid-template-columns property is used to define the number of columns in a grid layout and the size of each column.
+Purpose: It defines the columns of the grid.
+
+2.grid-template-rows
+
+The grid-template-rows property defines the number of rows in the grid layout and the size of each row. 
+
+Purpose: It defines the rows of the grid.
+
+3. grid-gap 
+The grid-gap property is used to define the space between rows and columns in the grid.
+
+examples:-
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 20px;
+}

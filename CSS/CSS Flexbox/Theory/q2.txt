@@ -1,0 +1,24 @@
+ Question 2: Describe the properties justify-content, align-items, and flex-direction used
+in Flexbox
+
+1. flex-direction
+
+.flex-container {
+    display: flex;
+    flex-direction: row; /* Default: items in a row */
+}
+
+
+2. justify-content
+
+.flex-container {
+    display: flex;
+    justify-content: center; /* Items will be centered along the main axis */
+}
+
+3. align-items
+
+.flex-container {
+    display: flex;
+    align-items: center; /* Items will be centered along the cross axis */
+}

@@ -1,0 +1,6 @@
+Question 2: Explain the concept of CSS specificity. How do conflicts between multiple styles
+get resolved?
+CSS Specificity:
+
+CSS specificity determines which CSS rule is applied to an element when multiple rules could apply to the same element. 
+It is essentially a measure of the "weight" of a CSS selector.
