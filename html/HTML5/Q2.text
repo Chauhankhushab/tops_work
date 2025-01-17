@@ -1,0 +1,16 @@
+• Question 2: What are the additional tags used in HTML5?
+
+-> <article>
+    <aside>
+    <details>
+    <figcaption>
+    <figure>
+    <footer>
+    <header>
+    <main>
+    <audio>
+    <video>
+    <date>
+    <track>
+    <source>
+    <embed>
