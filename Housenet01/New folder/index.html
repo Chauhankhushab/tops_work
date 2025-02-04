@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HouseNet</title>
+    <!-- -----------------------favicon------------------------------ -->
+    <link rel="icon" href="/IMAGES/asset 6.svg" />
+    <!-- ----------------------------css---------------------------------- -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- -----------------------------madia----------------------------- -->
+    <link rel="stylesheet" href="media.css" />
+    <!-- -------------------icon------------------ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- -----------------------------fonts-------------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ------------------------------first page---------------------------------------- -->
+    <div class="container">
+      <div class="header">
+        <div class="left">
+          <div class="logo">
+            <svg
+              width="264"
+              height="38"
+              viewBox="0 0 264 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M46.71 31V9.4H50.67V18.19H64.83V9.4H68.79V31H64.83V22.21H50.67V31H46.71ZM76.3076 31C75.5476 31 74.8476 30.81 74.2076 30.43C73.5876 30.05 73.0876 29.55 72.7076 28.93C72.3276 28.29 72.1376 27.59 72.1376 26.83V13.57C72.1376 12.81 72.3276 12.12 72.7076 11.5C73.0876 10.86 73.5876 10.35 74.2076 9.97C74.8476 9.59 75.5476 9.4 76.3076 9.4H89.5676C90.3276 9.4 91.0176 9.59 91.6376 9.97C92.2776 10.35 92.7876 10.86 93.1676 11.5C93.5476 12.12 93.7376 12.81 93.7376 13.57V26.83C93.7376 27.59 93.5476 28.29 93.1676 28.93C92.7876 29.55 92.2776 30.05 91.6376 30.43C91.0176 30.81 90.3276 31 89.5676 31H76.3076ZM76.4576 27.01H89.3576C89.4576 27.01 89.5476 26.98 89.6276 26.92C89.7076 26.84 89.7476 26.75 89.7476 26.65V13.75C89.7476 13.65 89.7076 13.57 89.6276 13.51C89.5476 13.43 89.4576 13.39 89.3576 13.39H76.4576C76.3576 13.39 76.2676 13.43 76.1876 13.51C76.1276 13.57 76.0976 13.65 76.0976 13.75V26.65C76.0976 26.75 76.1276 26.84 76.1876 26.92C76.2676 26.98 76.3576 27.01 76.4576 27.01ZM101.151 31C100.391 31 99.6913 30.81 99.0513 30.43C98.4313 30.05 97.9313 29.55 97.5513 28.93C97.1713 28.29 96.9813 27.59 96.9813 26.83V9.4H100.941V26.65C100.941 26.75 100.971 26.84 101.031 26.92C101.111 26.98 101.201 27.01 101.301 27.01H114.201C114.301 27.01 114.391 26.98 114.471 26.92C114.551 26.84 114.591 26.75 114.591 26.65V9.4H118.581V26.83C118.581 27.59 118.391 28.29 118.011 28.93C117.631 29.55 117.121 30.05 116.481 30.43C115.861 30.81 115.171 31 114.411 31H101.151ZM125.965 31C125.205 31 124.505 30.81 123.865 30.43C123.245 30.05 122.745 29.55 122.365 28.93C121.985 28.29 121.795 27.59 121.795 26.83V25.18H125.755V26.65C125.755 26.75 125.785 26.84 125.845 26.92C125.925 26.98 126.015 27.01 126.115 27.01H139.045C139.145 27.01 139.225 26.98 139.285 26.92C139.365 26.84 139.405 26.75 139.405 26.65V22.54C139.405 22.44 139.365 22.36 139.285 22.3C139.225 22.24 139.145 22.21 139.045 22.21H125.965C125.205 22.21 124.505 22.02 123.865 21.64C123.245 21.26 122.745 20.76 122.365 20.14C121.985 19.5 121.795 18.79 121.795 18.01V13.57C121.795 12.81 121.985 12.12 122.365 11.5C122.745 10.86 123.245 10.35 123.865 9.97C124.505 9.59 125.205 9.4 125.965 9.4H139.225C139.985 9.4 140.675 9.59 141.295 9.97C141.935 10.35 142.445 10.86 142.825 11.5C143.205 12.12 143.395 12.81 143.395 13.57V15.22H139.405V13.75C139.405 13.65 139.365 13.57 139.285 13.51C139.225 13.43 139.145 13.39 139.045 13.39H126.115C126.015 13.39 125.925 13.43 125.845 13.51C125.785 13.57 125.755 13.65 125.755 13.75V17.86C125.755 17.96 125.785 18.04 125.845 18.1C125.925 18.16 126.015 18.19 126.115 18.19H139.225C139.985 18.19 140.675 18.38 141.295 18.76C141.935 19.14 142.445 19.65 142.825 20.29C143.205 20.91 143.395 21.61 143.395 22.39V26.83C143.395 27.59 143.205 28.29 142.825 28.93C142.445 29.55 141.935 30.05 141.295 30.43C140.675 30.81 139.985 31 139.225 31H125.965ZM146.73 31V9.4H166.62V13.39H150.72V18.19H163.5V22.21H150.72V27.01H166.62V31H146.73ZM169.639 31V9.4H173.989L187.249 25.18V9.4H191.239V31H186.889L173.599 15.19V31H169.639ZM194.66 31V9.4H214.55V13.39H198.65V18.19H211.43V22.21H198.65V27.01H214.55V31H194.66ZM221.649 31C220.889 31 220.189 30.81 219.549 30.43C218.929 30.05 218.429 29.55 218.049 28.93C217.669 28.29 217.479 27.59 217.479 26.83V25.18H221.439V26.65C221.439 26.75 221.469 26.84 221.529 26.92C221.609 26.98 221.699 27.01 221.799 27.01H234.729C234.829 27.01 234.909 26.98 234.969 26.92C235.049 26.84 235.089 26.75 235.089 26.65V22.54C235.089 22.44 235.049 22.36 234.969 22.3C234.909 22.24 234.829 22.21 234.729 22.21H221.649C220.889 22.21 220.189 22.02 219.549 21.64C218.929 21.26 218.429 20.76 218.049 20.14C217.669 19.5 217.479 18.79 217.479 18.01V13.57C217.479 12.81 217.669 12.12 218.049 11.5C218.429 10.86 218.929 10.35 219.549 9.97C220.189 9.59 220.889 9.4 221.649 9.4H234.909C235.669 9.4 236.359 9.59 236.979 9.97C237.619 10.35 238.129 10.86 238.509 11.5C238.889 12.12 239.079 12.81 239.079 13.57V15.22H235.089V13.75C235.089 13.65 235.049 13.57 234.969 13.51C234.909 13.43 234.829 13.39 234.729 13.39H221.799C221.699 13.39 221.609 13.43 221.529 13.51C221.469 13.57 221.439 13.65 221.439 13.75V17.86C221.439 17.96 221.469 18.04 221.529 18.1C221.609 18.16 221.699 18.19 221.799 18.19H234.909C235.669 18.19 236.359 18.38 236.979 18.76C237.619 19.14 238.129 19.65 238.509 20.29C238.889 20.91 239.079 21.61 239.079 22.39V26.83C239.079 27.59 238.889 28.29 238.509 28.93C238.129 29.55 237.619 30.05 236.979 30.43C236.359 30.81 235.669 31 234.909 31H221.649ZM250.094 31V13.39H241.274V9.4H262.874V13.39H254.084V31H250.094Z"
+                fill="#DF523D"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M20 2H35V17H25V12H20V2ZM15 12V2H0V17H10V12H15ZM10 22H0V37H15V27H10V22ZM20 27V37H35V22H25V27H20Z"
+                fill="#DF523D"
+              />
+              <path d="M35 2H20V12H25V17H35V2Z" fill="#0B0E13" />
+            </svg>
+          </div>
+        </div>
+        <div class="center">
+          <ul>
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li class="nav-item">
+              <a href="">Services <i class="fa-solid fa-circle-down"></i></a>
+              <ul>
+                <li><a href="">Commercial Spaces</a></li>
+                <li><a href="">Eco-Friendly Residences</a></li>
+                <li><a href="">Urban Apartments</a></li>
+                <li><a href="">Family Homes</a></li>
+                <li><a href="">Affordable Housing</a></li>
+                <li><a href="">Luxury Properties</a></li>
+              </ul>
+            </li>
+
+            <li><a href="">Properties</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Agent</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <i class="fa-solid fa-bars bars"></i>
+          <button class="btn">Contact Us</button>
+        </div>
+      </div>
+      <div class="main">
+        <div class="up">
+          <h1>Housenest</h1>
+        </div>
+
+        <div class="left-right">
+          <div class="left">
+            <div class="text">
+              <p>
+                Discover your dream home with us– the perfect platform for
+                finding properties that suit your needs!
+              </p>
+            </div>
+            <div class="btn">
+              <button><i class="fa-solid fa-house"></i> Explore More</button>
+            </div>
+          </div>
+
+          <div class="right">
+            <h1>249K</h1>
+            <h4>Projects Successfully Running</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- -----------------------------------second page------------------------------------------------ -->
+    <div class="work-info">
+            <div class="overlay">
+        <div class="search-box">
+            <div class="s">
+                <input type="text" placeholder="Search Properties">
+                <button>search</button>
+            </div>
+            <div class="s1">
+                <img src="/IMAGES/asset 2.svg" alt="">
+                <h1>Properties</h1>
+                <img src="/IMAGES/asset 3.svg" alt="">
+            </div>
+            <div class="s1">
+                <img src="/IMAGES/asset 4.svg" alt="">
+                <h1>Location</h1>
+                <img src="/IMAGES/asset 3.svg" alt="">
+            </div>
+            <div class="s1">
+                <img src="/IMAGES/asset 5.svg" alt="">
+                <h1>Type</h1>
+                <img src="/IMAGES/asset 3.svg" alt="">
+            </div>
+        </div>
+    </div>
+      <div class="info">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M10.2857 0H18V7.71429H12.8571V5.14286H10.2857V0ZM7.71429 5.14286V0H0V7.71429H5.14286V5.14286H7.71429ZM5.14286 10.2857H0V18H7.71429V12.8571H5.14286V10.2857ZM10.2857 12.8571V18H18V10.2857H12.8571V12.8571H10.2857Z"
+            fill="#DF523D"
+          />
+          <path
+            d="M18 7.71094V0H10.2852V5.15234H12.8516V7.71094H18Z"
+            fill="#0B0E13"
+          />
+        </svg>
+        <h1>Work Info</h1>
+      </div>
+
+      <div class="work">
+        <div class="box">
+          <h1>150+</h1>
+          <p>Project Completed</p>
+          <p></p>
+        </div>
+
+        <div class="box">
+          <h1>99+</h1>
+          <p>Happy Clients</p>
+        </div>
+        <div class="box">
+          <h1>86+</h1>
+          <p>Properties Sold</p>
+        </div>
+        <div class="box">
+          <h1>499+</h1>
+          <p>Listed Properties</p>
+        </div>
+      </div>
+    </div>
+    <!--  ------------------------------- Threepage-------------------------------------------  -->
+    <div class="about-us">
+      <div class="left">
+        <div class="a1">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17.1429 0H30V12.8571H23V8H17.1429V0ZM12.8571 8V0H0V12.8571H8V8H12.8571ZM8 17.1429H0V30H12.8571V23H8V17.1429ZM17.1429 23V30H30V17.1429H23V23H17.1429Z"
+              fill="#DF523D"
+            />
+            <path d="M30 12.8605V0H17.1523V8H23V12.8605H30Z" fill="#0B0E13" />
+          </svg>
+
+          <h1>About us</h1>
+        </div>
+        <div class="a2">
+          <h1>Building Dreams, One Perfect Home at a Time</h1>
+        </div>
+        <div class="a3">   
+            <img src="/IMAGES/asset 2.svg" alt="" />
+            <h3>View More</h3>
+        </div>
+        <div class="a4">
+          <div class="box">
+            <h1>Home</h1>
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.5 13.4499H20.5834M20.5834 13.4499L13 5.86658M20.5834 13.4499L13 21.0332"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="box">
+            <h1>Apartments</h1>
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.5 13.4499H20.5834M20.5834 13.4499L13 5.86658M20.5834 13.4499L13 21.0332"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="box">
+            <h1>Row House</h1>
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.5 13.4499H20.5834M20.5834 13.4499L13 5.86658M20.5834 13.4499L13 21.0332"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p>
+            Explore our row houses, featuring stylish designs, spacious layouts,
+            and a perfect balance of privacy and community living.
+          </p>
+        </div>
+      </div>
+
+      <div class="right">
+        <img src="/IMAGES/asset 11.avif" alt="" />
+      </div>
+    </div>
+    <!-- ----------------------------------- Fourpage------------------------------------- -->
+    <div class="details">
+      <div class="left">
+          <img src="/IMAGES/asset 12.avif" alt="">
+      </div>
+          <div class="right">
+              <div class="a1">
+                  <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1429 0H30V12.8571H23V8H17.1429V0ZM12.8571 8V0H0V12.8571H8V8H12.8571ZM8 17.1429H0V30H12.8571V23H8V17.1429ZM17.1429 23V30H30V17.1429H23V23H17.1429Z" fill="#DF523D"/>
+                      <path d="M30 12.8605V0H17.1523V8H23V12.8605H30Z" fill="#0B0E13"/>
+                      </svg>
+                      
+              <h1>property details</h1>
+          </div>
+          <div class="a2">
+              <h1>Explore Every Detail of Your Dream Property Today</h1>
+          </div>
+          <div class="a3">
+              <div class="btn">
+              <img src="/IMAGES/asset 2.svg" alt="">
+              <h3>View More</h3>
+          </div>
+          </div>
+          <div class="a4">
+              <div class="box">
+                  <img src="/IMAGES/asset 13.svg" alt="">
+                  <h1>2500 sqft</h1>
+              </div>
+              <div class="box">
+                  <img src="/IMAGES/asset 14.svg" alt="">
+                  <h1>3 bedrooms</h1>
+              </div>
+              <div class="box">
+                  <img src="/IMAGES/asset 15.svg" alt="">
+                  <h1>2 bedrooms</h1>
+              </div>
+              <div class="box">
+              
+                  <img src="/IMAGES/asset 16.svg" alt="">
+                  <h1>party Hall</h1>
+               
+              </div>
+          </div>
+          </div>
+          
+     
+  </div>
+  <!-- --------------------------------------------fivepage----------------------------------------------- -->
+  <div class="Best">
+    <div class="up">
+        <div class="logo">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1429 0H30V12.8571H23V8H17.1429V0ZM12.8571 8V0H0V12.8571H8V8H12.8571ZM8 17.1429H0V30H12.8571V23H8V17.1429ZM17.1429 23V30H30V17.1429H23V23H17.1429Z" fill="#DF523D"/>
+                <path d="M30 12.8605V0H17.1523V8H23V12.8605H30Z" fill="#0B0E13"/>
+                </svg>
+           <h1> Best Property</h1>
+        </div>
+        <div class="a3">
+            <div class="btn">
+       
+            <h3>View More</h3>
+            <img src="/IMAGES/asset 8.svg" alt="">
+        </div>
+        </div>
+    </div>
+    <div class="down">
+        <div class="box">
+            <div class="imgss">
+            <img src="/IMAGES/asset 17.avif" alt="">
+            <div class="ovelay">
+                <h3>For Sell</h3>
+            </div>
+        </div>
+        <h1 class="s7"> Maple Haven</h1>
+            
+            <div class="a">
+                <div class="a1">
+                   <img src="/IMAGES/asset 18.svg" alt="">
+                   <h1>3 Bedrooms</h1>
+                </div>
+                <div class="a2">
+                  <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.8333 43.75V16.6667C20.8333 16.1141 20.6138 15.5842 20.2231 15.1935C19.8324 14.8028 19.3025 14.5833 18.75 14.5833H8.33333C7.7808 14.5833 7.25089 14.8028 6.86019 15.1935C6.46949 15.5842 6.25 16.1141 6.25 16.6667V41.6667C6.25 42.2192 6.46949 42.7491 6.86019 43.1398C7.25089 43.5305 7.7808 43.75 8.33333 43.75H33.3333C33.8859 43.75 34.4158 43.5305 34.8065 43.1398C35.1972 42.7491 35.4167 42.2192 35.4167 41.6667V31.25C35.4167 30.6975 35.1972 30.1676 34.8065 29.7769C34.4158 29.3862 33.8859 29.1667 33.3333 29.1667H6.25M31.25 6.25H41.6667C42.8173 6.25 43.75 7.18274 43.75 8.33333V18.75C43.75 19.9006 42.8173 20.8333 41.6667 20.8333H31.25C30.0994 20.8333 29.1667 19.9006 29.1667 18.75V8.33333C29.1667 7.18274 30.0994 6.25 31.25 6.25Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+                    <h1>1800 sqft</h1>
+                </div>
+            </div>
+            <div class="b">
+                <img src="/IMAGES/asset 4.svg" alt="">
+                <p>14 Serenity Lane, Bangalore, India</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgss">
+            <img src="/IMAGES/asset 19.avif" alt="">
+            <div class="ovelay">
+                <h3>For Sell</h3>
+            </div>
+        </div>
+        <h1 class="s7"> Cedar View Residence</h1>
+            <div class="a">
+                <div class="a1">
+                   <img src="/IMAGES/asset 18.svg" alt="">
+                   <h1>3 Bedrooms</h1>
+                </div>
+                <div class="a2">
+                  <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.8333 43.75V16.6667C20.8333 16.1141 20.6138 15.5842 20.2231 15.1935C19.8324 14.8028 19.3025 14.5833 18.75 14.5833H8.33333C7.7808 14.5833 7.25089 14.8028 6.86019 15.1935C6.46949 15.5842 6.25 16.1141 6.25 16.6667V41.6667C6.25 42.2192 6.46949 42.7491 6.86019 43.1398C7.25089 43.5305 7.7808 43.75 8.33333 43.75H33.3333C33.8859 43.75 34.4158 43.5305 34.8065 43.1398C35.1972 42.7491 35.4167 42.2192 35.4167 41.6667V31.25C35.4167 30.6975 35.1972 30.1676 34.8065 29.7769C34.4158 29.3862 33.8859 29.1667 33.3333 29.1667H6.25M31.25 6.25H41.6667C42.8173 6.25 43.75 7.18274 43.75 8.33333V18.75C43.75 19.9006 42.8173 20.8333 41.6667 20.8333H31.25C30.0994 20.8333 29.1667 19.9006 29.1667 18.75V8.33333C29.1667 7.18274 30.0994 6.25 31.25 6.25Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    <h1>1600 sqft</h1>
+                </div>
+            </div>
+            <div class="b">
+                <img src="/IMAGES/asset 4.svg" alt="">
+                <p>25 Linden Street, Berlin, Germany</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgss">
+            <img src="/IMAGES/asset 20.avif" alt="">
+            <div class="ovelay">
+                <h3>For Sell</h3>
+            </div>
+            </div>
+            <h1 class="s7">  Pinewood Estate</h1>
+            <div class="a">
+                <div class="a1">
+                   <img src="/IMAGES/asset 18.svg" alt="">
+                   <h1>4 Bedrooms</h1>
+                </div>
+                <div class="a2">
+                  <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.8333 43.75V16.6667C20.8333 16.1141 20.6138 15.5842 20.2231 15.1935C19.8324 14.8028 19.3025 14.5833 18.75 14.5833H8.33333C7.7808 14.5833 7.25089 14.8028 6.86019 15.1935C6.46949 15.5842 6.25 16.1141 6.25 16.6667V41.6667C6.25 42.2192 6.46949 42.7491 6.86019 43.1398C7.25089 43.5305 7.7808 43.75 8.33333 43.75H33.3333C33.8859 43.75 34.4158 43.5305 34.8065 43.1398C35.1972 42.7491 35.4167 42.2192 35.4167 41.6667V31.25C35.4167 30.6975 35.1972 30.1676 34.8065 29.7769C34.4158 29.3862 33.8859 29.1667 33.3333 29.1667H6.25M31.25 6.25H41.6667C42.8173 6.25 43.75 7.18274 43.75 8.33333V18.75C43.75 19.9006 42.8173 20.8333 41.6667 20.8333H31.25C30.0994 20.8333 29.1667 19.9006 29.1667 18.75V8.33333C29.1667 7.18274 30.0994 6.25 31.25 6.25Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    <h1>2800 sqft</h1>
+                </div>
+            </div>
+            <div class="b">
+                <img src="/IMAGES/asset 4.svg" alt="">
+                <p>78 Evergreen Lane, Melbourne, Australia</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgss">
+            <img src="/IMAGES/asset 21.avif" alt="">
+            <div class="ovelay"> 
+                <h3>For Sell</h3>
+            </div>
+        </div>
+        <h1 class="s7">Maple Haven</h1>
+            <div class="a">
+                <div class="a1">
+                   <img src="/IMAGES/asset 18.svg" alt="">
+                   <h1>3 Bedrooms</h1>
+                </div>
+                <div class="a2">
+                  <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.8333 43.75V16.6667C20.8333 16.1141 20.6138 15.5842 20.2231 15.1935C19.8324 14.8028 19.3025 14.5833 18.75 14.5833H8.33333C7.7808 14.5833 7.25089 14.8028 6.86019 15.1935C6.46949 15.5842 6.25 16.1141 6.25 16.6667V41.6667C6.25 42.2192 6.46949 42.7491 6.86019 43.1398C7.25089 43.5305 7.7808 43.75 8.33333 43.75H33.3333C33.8859 43.75 34.4158 43.5305 34.8065 43.1398C35.1972 42.7491 35.4167 42.2192 35.4167 41.6667V31.25C35.4167 30.6975 35.1972 30.1676 34.8065 29.7769C34.4158 29.3862 33.8859 29.1667 33.3333 29.1667H6.25M31.25 6.25H41.6667C42.8173 6.25 43.75 7.18274 43.75 8.33333V18.75C43.75 19.9006 42.8173 20.8333 41.6667 20.8333H31.25C30.0994 20.8333 29.1667 19.9006 29.1667 18.75V8.33333C29.1667 7.18274 30.0994 6.25 31.25 6.25Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    <h1>1800 sqft</h1>
+                </div>
+            </div>
+            <div class="b">
+                <img src="/IMAGES/asset 4.svg" alt="">
+                <p>14 Serenity Lane, Bangalore, India</p>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- -------------------------------------sixpage-------------------------------------------- -->
+<div class="play-box">
+  <div class="box">
+  <h1> play video</h1>
+    </div>
+  </div>
+<!-- --------------------------------------------seven------------------------------------- -->
+<div class="Agents">
+  <div class="up">
+      <div class="left">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1429 0H30V12.8571H23V8H17.1429V0ZM12.8571 8V0H0V12.8571H8V8H12.8571ZM8 17.1429H0V30H12.8571V23H8V17.1429ZM17.1429 23V30H30V17.1429H23V23H17.1429Z" fill="#DF523D"/>
+              <path d="M30 12.8605V0H17.1523V8H23V12.8605H30Z" fill="#0B0E13"/>
+              </svg>
+         <h1>Housenest Agents</h1>
+      </div>
+      <div class="right">
+          <div class="btn">
+              <h3>View More</h3>
+              <img src="/IMAGES/asset 8.svg" alt="">
+            </div>
+      </div>
+  </div>
+  <div class="down">
+      <div class="box">
+          <div class="imgss">
+          <img src="/IMAGES/asset 22.avif" alt="">
+          <div class="ovelay">
+              <img src="/IMAGES/asset 23.svg" alt="">
+              <img src="/IMAGES/asset 24.svg" alt="">
+              <img src="/IMAGES/asset 25.svg" alt="">
+              <img src="/IMAGES/asset 26.svg" alt="">
+          </div>
+      </div>
+      <h1> Jessica Miller</h1>
+
+          <div class="b">
+              <img src="/IMAGES/asset 4.svg" alt="">
+              <p>California, United</p>
+          </div>
+      </div>
+      <div class="box">
+          <div class="imgss">
+          <img src="/IMAGES/asset 27.avif" alt="">
+          <div class="ovelay">
+              <img src="/IMAGES/asset 23.svg" alt="">
+              <img src="/IMAGES/asset 24.svg" alt="">
+              <img src="/IMAGES/asset 25.svg" alt="">
+              <img src="/IMAGES/asset 26.svg" alt="">
+          </div>
+      </div>
+          <h1> Robert Thomas</h1>
+
+          <div class="b">
+              <img src="/IMAGES/asset 4.svg" alt="">
+              <p>California, United States</p>
+          </div>
+      </div>
+      <div class="box">
+          <div class="imgss">
+          <img src="/IMAGES/asset 28.avif" alt="">
+          <div class="ovelay">
+              <img src="/IMAGES/asset 23.svg" alt="">
+              <img src="/IMAGES/asset 24.svg" alt="">
+              <img src="/IMAGES/asset 25.svg" alt="">
+              <img src="/IMAGES/asset 26.svg" alt="">
+          </div>
+          </div>
+          <h1>  Emily Clark</h1>
+    
+          <div class="b">
+              <img src="/IMAGES/asset 4.svg" alt="">
+              <p>Arizona, United States</p>
+          </div>
+      </div>
+      <div class="box">
+          <div class="imgss">
+          <img src="/IMAGES/asset 29.avif" alt="">
+          <div class="ovelay">
+              <img src="/IMAGES/asset 23.svg" alt="">
+              <img src="/IMAGES/asset 24.svg" alt="">
+              <img src="/IMAGES/asset 25.svg" alt="">
+              <img src="/IMAGES/asset 26.svg" alt="">
+          </div>
+      </div>
+          <h1>David Williams</h1>
+       
+          <div class="b">
+              <img src="/IMAGES/asset 4.svg" alt="">
+              <p>Nevada, United States</p>
+          </div>
+      </div>
+  </div>
+</div>
+<!--  -----------------------------------Eightpage------------------------------ -->
+<div class="faq">
+  <div class="up">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1429 0H30V12.8571H23V8H17.1429V0ZM12.8571 8V0H0V12.8571H8V8H12.8571ZM8 17.1429H0V30H12.8571V23H8V17.1429ZM17.1429 23V30H30V17.1429H23V23H17.1429Z" fill="#DF523D"/>
+          <path d="M30 12.8605V0H17.1523V8H23V12.8605H30Z" fill="#0B0E13"/>
+          </svg>
+     <h1>FAQ</h1>
+  </div>
+  <div class="down">
+      <div class="left">
+          <div class="box">
+              <p>What types of properties do you offer?</p>
+              <i class="fa-solid fa-plus"></i>
+
+        
+      </div>
+          <div class="box">
+              <p>do you  offer finacing options?</p>
+              <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="box">
+              <p>any hidden fees when purchasing a property?</p>
+              <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="box">
+              <p>how do i get in touch with a real estate Agents?</p>
+              <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="box">
+              <p>do you offer relocation services?</p>
+              <i class="fa-solid fa-plus"></i>
+          </div>
+      </div>
+      <div class="right">
+          <div class="box">
+              <p>how can i schedule a propety viewwing?</p>
+              <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="box">
+              <p>what is the process for purchassing a property?</p>
+              <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="box">
+              <p>can i customize my property?</p>
+              <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="box">
+              <p>what warranty or guarantees do you offer? </p>
+              <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="box">
+              <p>How do i sell my property with housenest?</p>
+              <i class="fa-solid fa-plus"></i>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- -----------------------------------------ninepage------------------------------------------ -->
+<div class="Blog">
+  <div class="up">
+      <div class="left">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1429 0H30V12.8571H23V8H17.1429V0ZM12.8571 8V0H0V12.8571H8V8H12.8571ZM8 17.1429H0V30H12.8571V23H8V17.1429ZM17.1429 23V30H30V17.1429H23V23H17.1429Z" fill="#DF523D"/>
+              <path d="M30 12.8605V0H17.1523V8H23V12.8605H30Z" fill="#0B0E13"/>
+              </svg>
+         <h1>Blog Post</h1>
+      </div>
+      <div class="right">
+              <h3>View More</h3>
+              <img src="/IMAGES/asset 8.svg" alt="">
+      </div>
+  </div>
+  <div class="down">
+      <div class="box">
+          <div class="img-box">
+          <img src="/IMAGES/asset 30.avif" alt="">
+          </div>
+          <h4>How to Choose the Ideal Neighborhood</h4>
+          <p>Learn how to choose the ideal neighborhood for your next home. Explore factors that affect your lifestyle and investment.
+          </p>
+          <a href="">Read More</a>
+      </div>
+      <div class="box">
+          <div class="img-box">
+              <img src="/IMAGES/asset 31.avif" alt="">
+              </div>
+          <h4>Tips for Finding the Perfect Neighborhood</h4>
+          <p>Discover essential tips for finding the perfect neighborhood. Make an informed choice that enhances your lifestyle and investment.
+          </p>
+          <a href="">Read More</a>
+      </div>
+      <div class="box">
+          <div class="img-box">
+              <img src="/IMAGES/asset 32.avif" alt="">
+              </div>
+          <h4>Choosing the Right Neighborhood for Home</h4>
+          <p>Learn the essential factors to consider when selecting the right neighborhood. Find a place that matches your lifestyle and needs.
+
+          </p>
+          <a href="">Read More</a>
+      </div> 
+  </div>
+</div>
+  <!-- ----------------------------------tenpage---------------------------------------------------------- -->
+<div class="footer">
+    <div class="s1">
+        <h1>Lest's Talk</h1>
+        <div class="right">  
+            <h3>Contact Us</h3>
+            <img src="/IMAGES/asset 8.svg" alt="">
+         </div>
+    </div>
+
+    <div class="s2">
+        <p>Stay connected with Housenest for the latest property listings, expert advice, and personalized service. Let us help you find your dream home!</p>
+        <svg width="264" height="38" viewBox="0 0 264 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M46.71 31V9.4H50.67V18.19H64.83V9.4H68.79V31H64.83V22.21H50.67V31H46.71ZM76.3076 31C75.5476 31 74.8476 30.81 74.2076 30.43C73.5876 30.05 73.0876 29.55 72.7076 28.93C72.3276 28.29 72.1376 27.59 72.1376 26.83V13.57C72.1376 12.81 72.3276 12.12 72.7076 11.5C73.0876 10.86 73.5876 10.35 74.2076 9.97C74.8476 9.59 75.5476 9.4 76.3076 9.4H89.5676C90.3276 9.4 91.0176 9.59 91.6376 9.97C92.2776 10.35 92.7876 10.86 93.1676 11.5C93.5476 12.12 93.7376 12.81 93.7376 13.57V26.83C93.7376 27.59 93.5476 28.29 93.1676 28.93C92.7876 29.55 92.2776 30.05 91.6376 30.43C91.0176 30.81 90.3276 31 89.5676 31H76.3076ZM76.4576 27.01H89.3576C89.4576 27.01 89.5476 26.98 89.6276 26.92C89.7076 26.84 89.7476 26.75 89.7476 26.65V13.75C89.7476 13.65 89.7076 13.57 89.6276 13.51C89.5476 13.43 89.4576 13.39 89.3576 13.39H76.4576C76.3576 13.39 76.2676 13.43 76.1876 13.51C76.1276 13.57 76.0976 13.65 76.0976 13.75V26.65C76.0976 26.75 76.1276 26.84 76.1876 26.92C76.2676 26.98 76.3576 27.01 76.4576 27.01ZM101.151 31C100.391 31 99.6913 30.81 99.0513 30.43C98.4313 30.05 97.9313 29.55 97.5513 28.93C97.1713 28.29 96.9813 27.59 96.9813 26.83V9.4H100.941V26.65C100.941 26.75 100.971 26.84 101.031 26.92C101.111 26.98 101.201 27.01 101.301 27.01H114.201C114.301 27.01 114.391 26.98 114.471 26.92C114.551 26.84 114.591 26.75 114.591 26.65V9.4H118.581V26.83C118.581 27.59 118.391 28.29 118.011 28.93C117.631 29.55 117.121 30.05 116.481 30.43C115.861 30.81 115.171 31 114.411 31H101.151ZM125.965 31C125.205 31 124.505 30.81 123.865 30.43C123.245 30.05 122.745 29.55 122.365 28.93C121.985 28.29 121.795 27.59 121.795 26.83V25.18H125.755V26.65C125.755 26.75 125.785 26.84 125.845 26.92C125.925 26.98 126.015 27.01 126.115 27.01H139.045C139.145 27.01 139.225 26.98 139.285 26.92C139.365 26.84 139.405 26.75 139.405 26.65V22.54C139.405 22.44 139.365 22.36 139.285 22.3C139.225 22.24 139.145 22.21 139.045 22.21H125.965C125.205 22.21 124.505 22.02 123.865 21.64C123.245 21.26 122.745 20.76 122.365 20.14C121.985 19.5 121.795 18.79 121.795 18.01V13.57C121.795 12.81 121.985 12.12 122.365 11.5C122.745 10.86 123.245 10.35 123.865 9.97C124.505 9.59 125.205 9.4 125.965 9.4H139.225C139.985 9.4 140.675 9.59 141.295 9.97C141.935 10.35 142.445 10.86 142.825 11.5C143.205 12.12 143.395 12.81 143.395 13.57V15.22H139.405V13.75C139.405 13.65 139.365 13.57 139.285 13.51C139.225 13.43 139.145 13.39 139.045 13.39H126.115C126.015 13.39 125.925 13.43 125.845 13.51C125.785 13.57 125.755 13.65 125.755 13.75V17.86C125.755 17.96 125.785 18.04 125.845 18.1C125.925 18.16 126.015 18.19 126.115 18.19H139.225C139.985 18.19 140.675 18.38 141.295 18.76C141.935 19.14 142.445 19.65 142.825 20.29C143.205 20.91 143.395 21.61 143.395 22.39V26.83C143.395 27.59 143.205 28.29 142.825 28.93C142.445 29.55 141.935 30.05 141.295 30.43C140.675 30.81 139.985 31 139.225 31H125.965ZM146.73 31V9.4H166.62V13.39H150.72V18.19H163.5V22.21H150.72V27.01H166.62V31H146.73ZM169.639 31V9.4H173.989L187.249 25.18V9.4H191.239V31H186.889L173.599 15.19V31H169.639ZM194.66 31V9.4H214.55V13.39H198.65V18.19H211.43V22.21H198.65V27.01H214.55V31H194.66ZM221.649 31C220.889 31 220.189 30.81 219.549 30.43C218.929 30.05 218.429 29.55 218.049 28.93C217.669 28.29 217.479 27.59 217.479 26.83V25.18H221.439V26.65C221.439 26.75 221.469 26.84 221.529 26.92C221.609 26.98 221.699 27.01 221.799 27.01H234.729C234.829 27.01 234.909 26.98 234.969 26.92C235.049 26.84 235.089 26.75 235.089 26.65V22.54C235.089 22.44 235.049 22.36 234.969 22.3C234.909 22.24 234.829 22.21 234.729 22.21H221.649C220.889 22.21 220.189 22.02 219.549 21.64C218.929 21.26 218.429 20.76 218.049 20.14C217.669 19.5 217.479 18.79 217.479 18.01V13.57C217.479 12.81 217.669 12.12 218.049 11.5C218.429 10.86 218.929 10.35 219.549 9.97C220.189 9.59 220.889 9.4 221.649 9.4H234.909C235.669 9.4 236.359 9.59 236.979 9.97C237.619 10.35 238.129 10.86 238.509 11.5C238.889 12.12 239.079 12.81 239.079 13.57V15.22H235.089V13.75C235.089 13.65 235.049 13.57 234.969 13.51C234.909 13.43 234.829 13.39 234.729 13.39H221.799C221.699 13.39 221.609 13.43 221.529 13.51C221.469 13.57 221.439 13.65 221.439 13.75V17.86C221.439 17.96 221.469 18.04 221.529 18.1C221.609 18.16 221.699 18.19 221.799 18.19H234.909C235.669 18.19 236.359 18.38 236.979 18.76C237.619 19.14 238.129 19.65 238.509 20.29C238.889 20.91 239.079 21.61 239.079 22.39V26.83C239.079 27.59 238.889 28.29 238.509 28.93C238.129 29.55 237.619 30.05 236.979 30.43C236.359 30.81 235.669 31 234.909 31H221.649ZM250.094 31V13.39H241.274V9.4H262.874V13.39H254.084V31H250.094Z" fill="#000000"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 2H35V17H25V12H20V2ZM15 12V2H0V17H10V12H15ZM10 22H0V37H15V27H10V22ZM20 27V37H35V22H25V27H20Z" fill="#000000"/>
+            <path d="M35 2H20V12H25V17H35V2Z" fill="#000000"/>
+            </svg>
+            
+
+    </div>
+    <div class="s3">
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <div class="c1">
+                <img src="/IMAGES/asset 4.svg" alt="">
+                <p>Malegaon, Maharashtra 423203, India</p>
+            </div>
+            <div class="c1">
+                <img src="/IMAGES/asset 35.svg" alt="">
+                <p>+91 98765 43210</p>
+            </div>
+            <div class="c1">
+                <img src="/IMAGES/asset 36.svg" alt="">
+                <p>yourId@gmail.com</p>
+            </div>
+        </div>
+        <div class="help">
+            <h3>Help</h3>
+            <p>Style Guide</p>
+            <p>License</p>
+            <p>Changelog</p>
+        </div>
+        <div class="page">
+            <h3>Other Page</h3>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+            <p>Protected Page</p>
+            <p>404 Page</p>
+        </div>
+        <div class="social">
+            <h3>Social Media</h3>
+            <p>Facebook</p>
+            <p>Instagram</p>
+            <p>Twitter</p>
+            <p>Linkedin</p>
+            <p>YouTube</p>
+        </div>
+    </div>
+    <div class="s4">
+        <p>2025 HOUSENEST. All right reserved. Powered by ❤️Harsh❤️</p>
+    </div>
+</div>
+
+</body>
+</html>

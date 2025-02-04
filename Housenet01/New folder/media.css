@@ -1,0 +1,715 @@
+@media (max-width: 576px) {
+  /* --------------------------------firstpage----------------------------------- */
+  .container {
+    padding-top: 20px;
+  }
+  .container .header .center {
+    display: none;
+  }
+  .container .header .right button {
+    display: none;
+  }
+  .container .header .right i {
+    visibility: visible;
+  }
+  .container .main .up h1 {
+    font-size: 120px;
+  }
+  /* -------------------------------secondpage-------------------------------- */
+  
+.work-info .overlay {
+  display: none;
+}
+  .work-info .info {
+    font-size: 16px;
+    margin: 0 5px;
+  }
+  .work-info .work {
+    grid-template-columns: repeat(2, 4fr);
+    gap: 30px;
+    margin-top: 10px;
+  }
+  /* ------------------------------- Threepage------------------------------------------- */
+  .about-us {
+    flex-direction: column;
+    width: 100%;
+  }
+  .about-us .left .a3 {
+    margin-top: 20px;
+  }
+  .about-us .left .a4 {
+    margin-top: 10px;
+  }
+  .about-us .right img {
+    width: 500px;
+    margin-left: 20px;
+  }
+  /* <!-- ----------------------------------- Fourpage------------------------------------- --> */
+  .details {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .details .left img {
+    width: 550px;
+  }
+  .details .right .a2 h1 {
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  .details .right .a3 .btn {
+    margin-top: 40px;
+  }
+  .details .right .a4 {
+    margin-top: 45px;
+  }
+  /* ------------------------------------------Five page--------------------------- */
+  .Best .down{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:0px;
+    margin-left: 5px;
+    padding: 10px 10px;
+  }
+  .Best .down .box .imgss {
+    width: 87%;
+  }
+  .Best .down .box  .ovelay {
+    left: 70%;
+  }
+  /* <!-- -------------------------------------sixpage-------------------------------------------- --> */
+  .play-box .box{
+
+    width: 130%;  
+  
+  }
+  .play-box .box h1{
+    left: 35%;
+    top: 30%;
+   }
+   /* ------------------------------------sevenpage--------------------------------------------- */
+   .Agents{
+    width: 117%;
+   }
+   .Agents .down{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    
+   }
+   .Agents .up{
+    width: 107%;
+   }
+   /* -----------------------------------Eightpage------------------------------ */
+   .faq .down{
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .faq .down .left,
+.faq .down .right{
+  display: flex;
+  width: 128%;
+  flex-direction: column;
+  gap: 15px;
+}
+/* -------------------------------------ninepage------------------------------------- */
+.Blog .down{
+
+  grid-template-columns: repeat(1,2fr);
+  width: 10%;
+  }
+  .Blog .down .box img {
+
+    width: 670px;
+
+  
+  }
+  /* -------------------tenpage---------------------------------------------------------- */
+  .footer{
+    width: 100%;
+  }
+  .footer .s1{
+
+    padding: -50px;
+    flex-direction: column;
+    width: 300px;
+
+  }
+  .footer .s1 h1{
+    font-size:100px;
+  }
+  .footer .s2{
+    width: 700px;
+    margin-top: 40px;
+    flex-direction: column-reverse;
+    padding: 0px 0px;
+    margin-left: -80px;
+    margin-right: 0px;
+    gap: 40px;
+
+  }
+  .footer .s2 svg{
+    margin-left: -200px;
+   
+  }
+  .footer .s2 p{
+    font-size: 20px;
+    font-weight: 600;
+    width: 70%;
+   
+  }
+  .footer .s3{
+    grid-template-columns: repeat(2,2fr);
+  }
+}
+@media (min-width: 576px) {
+  /* --------------------------------firstpage----------------------------------- */
+  .container {
+    padding-top: 20px;
+  }
+  .container .header .center {
+    display: none;
+  }
+  .container .header .right button {
+    display: none;
+  }
+  .container .header .right i {
+    visibility: visible;
+  }
+  .container .main .up h1 {
+    font-size: 120px;
+  }
+  /* -------------------------------secondpage-------------------------------- */
+  .work-info .overlay {
+    display: none;
+  }
+  .work-info .info {
+    font-size: 18px;
+    margin: 0 5px;
+  }
+  .work-info .work {
+    grid-template-columns: repeat(2, 4fr);
+    gap: 30px;
+    margin-top: 10px;
+  }
+  /* ------------------------------- Threepage------------------------------------------- */
+  .about-us {
+    flex-direction: column;
+    width: 100%;
+  }
+  .about-us .left .a3 {
+    margin-top: 20px;
+  }
+  .about-us .left .a4 {
+    margin-top: 10px;
+  }
+  .about-us .right img {
+    width: 550px;
+    margin-left: 10px;
+  }
+  /* <!-- ----------------------------------- Fourpage------------------------------------- --> */
+  .details {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .details .left img {
+    width: 650px;
+  }
+  .details .right .a2 h1 {
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  .details .right .a3 .btn {
+    margin-top: 40px;
+  }
+  .details .right .a4 {
+    margin-top: 45px;
+  }
+  /* --------------------------------------------fivepage----------------------------- */
+  .Best .down{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:0px;
+    margin-left: 5px;
+    padding: 10px 10px;
+  }
+  .Best .down .box .imgss {
+    width: 90%;
+  }
+  .Best .down .box  .ovelay {
+    left: 70%;
+  }
+    /* <!-- -------------------------------------sixpage-------------------------------------------- --> */
+    .play-box .box{
+      width: 125%;  
+    }
+    .play-box .box h1{
+      left: 35%;
+      top: 30%;
+     }
+     /* ------------------------------------sevenpage--------------------------------------------- */
+     .Agents{
+      width: 117%;
+     }
+     .Agents .down{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      width: 100%;
+      
+     }
+     .Agents .up{
+      width: 107%;
+     }
+     /* -----------------------------------Eightpage------------------------------ */
+     .faq .down{
+      margin-top: 30px;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .faq .down .left,
+  .faq .down .right{
+    display: flex;
+    width: 120%;
+    flex-direction: column;
+    gap: 15px;
+  }
+  /* ----------------------------------ninepage-------------------------------------- */
+  .Blog .down{
+
+    grid-template-columns: repeat(1,2fr);
+    width: 10%;
+    }
+    .Blog .down .box img {
+  
+      width: 730px;
+  
+    
+    }
+    /* ------------------------------tenpage-------------------------------------------- */
+    .footer{
+      width: 100%;
+    }
+    .footer .s1{
+  
+      padding: -50px;
+      flex-direction: column;
+      width: 300px;
+  
+    }
+    .footer .s1 h1{
+      font-size:100px;
+    }
+    .footer .s2{
+      width: 700px;
+      margin-top: 40px;
+      flex-direction: column-reverse;
+      padding: 0px 0px;
+      margin-left: -80px;
+      margin-right: 0px;
+      gap: 40px;
+  
+    }
+    .footer .s2 svg{
+      margin-left: -200px;
+     
+    }
+    .footer .s2 p{
+      font-size: 20px;
+      font-weight: 600;
+      width: 70%;
+     
+    }
+    .footer .s3{
+      grid-template-columns: repeat(2,2fr);
+    }
+    }
+@media (min-width: 768px) {
+  /* --------------------------------firstpage----------------------------------- */
+  .container .main .up h1 {
+    font-size: 170px;
+  }
+  /* -------------------------------secondpage-------------------------------- */
+  .work-info .info {
+    font-size: 22px;
+    margin: 0 5px;
+  }
+  .work-info .work {
+    grid-template-columns: repeat(2, 4fr);
+    gap: 40px;
+    margin-top: 10px;
+  }
+
+  /* ------------------------------- Threepage------------------------------------------- */
+
+  .about-us .right img {
+    width: 690px;
+    margin-left: 20px;
+  }
+  /* <!-- ----------------------------------- Fourpage------------------------------------- -->  */
+
+  .details .left img {
+    width: 730px;
+  }
+  /* -----------------------------------------five page------------------------------ */
+  .Best .down{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:0px;
+    margin-left: 5px;
+    padding: 10px 10px;
+  }
+  .Best .down .box {
+    /* margin-left: 20px; */
+    margin-top: 10px;
+  }
+  .Best .down .box .imgss {
+    width: 90%;
+    gap: 100px;
+  
+  }
+  .Best .down .box  .ovelay {
+    left: 75%;
+  }
+    /* <!-- -------------------------------------sixpage-------------------------------------------- --> */
+    .play-box .box{
+
+      width: 95%;  
+    
+    }
+    .play-box .box h1{
+      left: 40%;
+      top: 30%;
+     }
+     /* ------------------------------------sevenpage--------------------------------------------- */
+     .Agents{
+      width: 100%;
+     }
+     .Agents .down{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      width: 100%;
+      
+     }
+     .Agents .up{
+      width: 95%;
+     }
+  /* ----------------------------------ninepage-------------------------------------- */
+  .Blog .down{
+
+    grid-template-columns: repeat(1,2fr);
+    width: 10%;
+    }
+    .Blog .down .box img {
+  
+      width: 850px;
+  
+    
+    }
+    /* -------------------------------------tenpage----------------------------------------------------- */
+    .footer{
+      width: 100%;
+    }
+    .footer .s1{
+  
+      padding: -50px;
+      flex-direction: column;
+      width: 300px;
+  
+    }
+    .footer .s1 h1{
+      font-size:100px;
+    }
+    .footer .s2{
+      width: 700px;
+      margin-top: 40px;
+      flex-direction: column-reverse;
+      padding: 0px 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      gap: 40px;
+  
+    }
+    .footer .s2 svg{
+      margin-left: -200px;
+     
+    }
+    .footer .s2 p{
+      font-size: 20px;
+      font-weight: 600;
+      width: 70%;
+     
+    }
+    .footer .s3{
+      grid-template-columns: repeat(4,2fr);
+    }
+    }
+@media (min-width: 992px) {
+  /* --------------------------------firstpage----------------------------------- */
+  .container .main .up h1 {
+    font-size: 220px;
+  }
+  .container {
+    padding-top: 20px;
+  }
+  .container .header .center {
+    display: block;
+  }
+  .container .header .center ul {
+    gap: 0;
+  }
+
+  .container .header .right button {
+    display: block;
+  }
+  .container .header .right i {
+    visibility: hidden;
+  }
+  .container .main .up h1 {
+    font-size: 220px;
+  }
+  /* -------------------------------secondpage-------------------------------- */
+  .work-info .info {
+    font-size: 18px;
+    margin: 0 5px;
+  }
+  .work-info .work {
+    grid-template-columns: repeat(4, 4fr);
+    gap: 0px;
+    margin-top: 30px;
+  }
+  /* ------------------------------- Threepage------------------------------------------- */
+  .about-us {
+    flex-direction: row;
+    width: 100%;
+  }
+  .about-us .left .a3 {
+    margin-top: 20px;
+  }
+  .about-us .left .a4 {
+    margin-top: 10px;
+  }
+  .about-us .right img {
+    width: 500px;
+
+    height: 650px;
+  }
+  /* <!-- ----------------------------------- Fourpage------------------------------------- --> */
+  .details {
+    display: flex;
+    flex-direction: row;
+  }
+  .details .left img {
+    width: 500px;
+  }
+  .details .right .a2 h1 {
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  .details .right .a3 .btn {
+    margin-top: 40px;
+  }
+  .details .right .a4 {
+    gap: 10px;
+    margin-top: 100px;
+  }
+  /* <!-- -------------------------------------sixpage-------------------------------------------- --> */
+  .play-box .box{
+
+    width: 86%;  
+  
+  }
+  .play-box .box h1{
+    left: 40%;
+    top: 30%;
+   }
+   /* ------------------------------------sevenpage--------------------------------------------- */
+   .Agents{
+    width: 95%;
+   }
+   .Agents .down{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    
+   }
+   .Agents .up{
+    width: 107%;
+   }
+   /* -----------------------------------Eightpage------------------------------ */
+   .faq .down{
+    margin-top: 20px;
+    flex-direction: row;
+    gap: 15px;
+  }
+  .faq .down .left,
+.faq .down .right{
+  display: flex;
+  width: 128%;
+  flex-direction: column;
+  gap: 15px;
+}
+  /* ----------------------------------ninepage-------------------------------------- */
+  .Blog .down{
+
+    grid-template-columns: repeat(3,2fr);
+    width: 10%;
+    }
+    .Blog .down .box img {
+  
+      width: 300px;
+  
+    
+    }
+    
+  }
+
+@media (min-width: 1200px) {
+  /* --------------------------------firstpage----------------------------------- */
+  .container .header .center ul {
+    gap: 40px;
+  }
+  .container .main .up h1 {
+    font-size: 330px;
+  }
+  /* -------------------------------secondpage-------------------------------- */
+  .work-info .info {
+    font-size: 18px;
+    margin: 0 5px;
+  }
+  .work-info .work {
+    grid-template-columns: repeat(4, 4fr);
+    gap: 10px;
+    margin-top: 40px;
+  }
+  /* ------------------------------- Threepage------------------------------------------- */
+  .about-us .right img {
+    width: 100%;
+    height: 700px;
+  }
+  .about-us .left .a2 {
+    margin-top: 10px;
+  }
+  .about-us .left .a3 {
+    margin-top: 60px;
+  }
+  .about-us .left .a4 {
+    margin-top: 100px;
+  }
+  /* <!-- ----------------------------------- Fourpage------------------------------------- --> */
+  .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .details .left img {
+    width: 700px;
+  }
+  .details .right .a2 h1 {
+    font-size: 55px;
+    margin-top: 30px;
+  }
+  .details .right .a3 .btn {
+    margin-top: 100px;
+  }
+  .details .right .a4 {
+    gap: 10px;
+    margin-top: 250px;
+  }
+  /* ------------------------------------------------fivepage----------------------------------- */
+  .Best .down{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:0px;
+    margin-left: 5px;
+    padding: 10px 10px;
+  }
+  .Best .down .box {
+    /* margin-left: 20px; */
+    margin-top: 10px;
+  }
+  .Best .down .box .imgss {
+    width: 90%;
+    gap: 100px;
+  
+  }
+  .Best .down .box  .ovelay {
+    left: 75%;
+  }
+    /* <!-- -------------------------------------sixpage-------------------------------------------- --> */
+    .play-box .box{
+
+      width: 100%;  
+    
+    }
+    .play-box .box h1{
+      left: 45%;
+      top: 30%;
+     }
+     /* ------------------------------------sevenpage--------------------------------------------- */
+
+     .Agents{
+      width: 93%;
+     }
+     .Agents .down{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      width: 109%;
+     }
+     .Agents .up{
+      width: 107%;
+     }
+
+     /* -----------------------------------ninepage------------------------------ */
+     .Blog .down{
+
+      grid-template-columns: repeat(3,2fr);
+      width: 10%;
+      }
+      .Blog .down .box img {
+    
+        width:480px;
+    }
+    /* ---------------------------------tenpage---------------------------------------- */
+    .footer{
+      width: 100%;
+    }
+    .footer .s1{
+  
+      padding: 0px;
+      flex-direction: row;
+      width: 100%;
+      gap:20px
+  
+    }
+    .footer .s1 .right {
+    width: 13%
+    }
+    .footer .s1 h1{
+      font-size:200px;
+      width: 100%;
+    }
+    .footer .s2{
+      width:1500px;
+      margin-top: 40px;
+      flex-direction: row;
+
+      padding: 0px 0px;
+      margin-left: 10px;
+      margin-right: 10px;
+      gap: 40px;
+  
+    }
+    .footer .s2 svg{
+      margin-left: 0px;
+     
+    }
+    .footer .s2 p{
+      font-size: 20px;
+      font-weight: 600;
+      width: 100%;
+     
+    }
+    .footer .s3{
+      grid-template-columns: repeat(4,2fr);
+    }
+    }
