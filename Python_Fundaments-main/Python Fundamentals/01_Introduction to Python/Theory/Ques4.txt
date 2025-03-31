@@ -1,0 +1,6 @@
+
+Ques:4
+Installing Python and setting up the development environment (Anaconda, 
+PyCharm, or VS Code).
+
+Ans:

@@ -1,0 +1,18 @@
+Ques:1
+Understanding Python’s PEP 8 guidelines.
+Indentation, comments, and naming conventions in Python.
+Writing readable and maintainable code.
+
+
+Ans:
+->PEP stands for Python Enhancement Proposal.
+->PEP 8 is a document that provides various guidelines to write the readable in 
+Python.
+->PEP 8, sometimes spelled PEP8 or PEP-8, is the official style guide for 
+Python code. PEP 8 gives guidelines on naming conventions, code layout, and 
+other best practices. 
+->PEP 8 is a guide for writing clean, readable, and consistent Python code.
+->PEP 8 is still relevant in modern Python development.
+->Following PEP 8 is recommended for all Python developers.
+->Class names in Python use camel case, with each word starting with a capital 
+letter.

@@ -1,0 +1,61 @@
+Ques:
+Understanding how to access and manipulate strings.
+Basic operations: concatenation, repetition,string methods(upper(), lower(), etc.).
+String slicing.
+
+Ans:
+A string is a type of object, one that consists of a series of characters. 
+Python already knows how to deal with a number of general-purpose and powerful 
+representations, including strings. 
+One way to manipulate strings is by using string operators. 
+These operators are represented by symbols that you likely 
+associate with mathematics, such as +, -, *, /, and =.
+When used with strings,they perform actions that are similar to, but not the 
+same as, their mathematical counterparts.
+
+Manipulate
+If you have been exposed to another programming language before, you might have 
+learned that you need to declare or type variables before you can store 
+anything in them. This is not necessary when working with strings in Python. We 
+can create a string simply by putting content wrapped with quotation marks into 
+it with an equal sign (=):
+
+Concatenateconcatenate
+This term means to join strings together. The process is known as concatenating 
+strings and it is done using the plus (+) operator.
+Note that you must be explicit about where you want blank spaces to occur by 
+placing them between single quotation marks also.
+
+Upper Caselower-case
+Sometimes it is useful to convert a string to Upper case. For example, if we 
+standardize case it makes it easier for the computer to recognize that 
+“sometimes” and “SOMETIMES” are the same word.
+
+Lower Caselower-case
+Sometimes it is useful to convert a string to lower case. For example, if we 
+standardize case it makes it easier for the computer to recognize that 
+“Sometimes” and “sometimes” are the same word.
+
+----------------------------- STRING SLICING ----------------------------
+
+String slicing in Python is a way to get specific parts of a string by using 
+start, end, and step values. It’s especially useful for text manipulation and 
+data parsing.
+
+SYNTAX
+------
+substring = s[start : end : step]
+
+
+EXAMPLE
+--------
+s = "Hello, Python!"
+# Slice string from index 0 to index 5 (exclusive)
+s2 = s[0:5]
+print(s2)
+
+Output
+Hello
+
+->In this example, we used the slice s[0:5] to obtain the substring “Hello” 
+from the original string.

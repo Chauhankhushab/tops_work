@@ -1,0 +1,26 @@
+
+Ques:3
+Advantages of using Python over other programming languages
+
+Ans:
+There’s a reason why so much emphasis is given to choosing the ‘right language’ 
+to build your apps. 
+But, why Python? It is because Python has solidified its position as a dominant 
+force. 
+Its intuitive syntax, robust libraries, and thriving community make it a 
+favorite amongst beginners and professional developers alike. 
+Whether you're embarking on your programming journey or seeking to expand your 
+skillset, Python offers a multitude of advantages that propel it to the 
+forefront of development.
+
+
+--------------------------ADVANTAGES---------------------------
+
+1. Python is Simple to Learn and Use
+2. Perfect for Rapid Deployment
+3.Python has High-Performance
+4. Strong Support for Data Analysis and Scientific Computing
+5. User-Friendly Built-in Data Types
+6. Python Needs Less Coding
+7. Python Has OS Portability
+8. Python is Flexible in Deployment

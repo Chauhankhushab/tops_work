@@ -1,0 +1,31 @@
+
+Ques:2
+History and evolution of Python.
+
+Ans:
+
+---------------------------HISTORY-------------------------
+In the late 1980s, history was about to be written. It was that time when 
+working on Python started. Soon after that, Guido Van Rossum began doing its 
+application-based work in December of 1989 at Centrum Wiskunde & Informatica 
+(CWI) which is situated in the Netherlands. It was started as a hobby project 
+because he was looking for an interesting project to keep him occupied during 
+Christmas.
+
+The programming language in which Python is said to have succeeded is ABC 
+Programming Language, which had interfacing with the Amoeba Operating System 
+and had the feature of exception handling. He had already helped create ABC 
+earlier in his career and had seen some issues with ABC but liked most of the 
+features. After that what he did was very clever. He had taken the syntax of 
+ABC, and some of its good features. It came with a lot of complaints too, so he 
+fixed those issues completely and created a good scripting language that had 
+removed all the flaws.
+
+-------------Reason Behind The Name Python---------------
+
+In the late 1980s, history was about to be written. It was that time when 
+working on Python started. Soon after that, Guido Van Rossum began doing its 
+application-based work in December of 1989 at Centrum Wiskunde & Informatica 
+(CWI) which is situated in the Netherlands. It was started as a hobby project 
+because he was looking for an interesting project to keep him occupied during 
+Christmas.
